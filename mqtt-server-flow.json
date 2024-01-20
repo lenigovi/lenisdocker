@@ -1,0 +1,528 @@
+[
+    {
+        "id": "f56dafdc181dafae",
+        "type": "tab",
+        "label": "Task1.4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3699a2aa086d4aa8",
+        "type": "mqtt out",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "topic": "rwth/bcma/sessions/cMVAeMl1vUh2gn/command",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "bbb74405f0c98c1e",
+        "x": 1210,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "f43bb9d5de4a81d6",
+        "type": "ui_slider",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "label": "q0",
+        "tooltip": "",
+        "group": "1b913bb440dfe768",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-1.57",
+        "max": "+1.57",
+        "step": "0.02",
+        "className": "",
+        "x": 270,
+        "y": 140,
+        "wires": [
+            [
+                "9b26b5d46cb54f01"
+            ]
+        ]
+    },
+    {
+        "id": "9b26b5d46cb54f01",
+        "type": "change",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"command\":\"setJointValue\",\"jointName\":\"q0\",\"jointValue\":0}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.jointValue",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "6220b7aff60c49b3"
+            ]
+        ]
+    },
+    {
+        "id": "3de193b8c5746c83",
+        "type": "change",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"command\":\"setJointValue\",\"jointName\":\"q1\",\"jointValue\":0}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.jointValue",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 204,
+        "wires": [
+            [
+                "6220b7aff60c49b3"
+            ]
+        ]
+    },
+    {
+        "id": "7dd62a1b6203a40f",
+        "type": "ui_slider",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "label": "q1",
+        "tooltip": "",
+        "group": "1b913bb440dfe768",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-0.785",
+        "max": "+0.785",
+        "step": "0.02",
+        "className": "",
+        "x": 270,
+        "y": 204,
+        "wires": [
+            [
+                "3de193b8c5746c83"
+            ]
+        ]
+    },
+    {
+        "id": "f65ab59988111343",
+        "type": "change",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"command\":\"setJointValue\",\"jointName\":\"q2\",\"jointValue\":0}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.jointValue",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 268,
+        "wires": [
+            [
+                "6220b7aff60c49b3"
+            ]
+        ]
+    },
+    {
+        "id": "aadd380a435590b2",
+        "type": "ui_slider",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "label": "q2",
+        "tooltip": "",
+        "group": "0657dda42282684b",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-0.2",
+        "max": "0.00",
+        "step": "0.02",
+        "className": "",
+        "x": 270,
+        "y": 268,
+        "wires": [
+            [
+                "f65ab59988111343"
+            ]
+        ]
+    },
+    {
+        "id": "ee4019a0dbf88ab5",
+        "type": "change",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"command\":\"setJointValue\",\"jointName\":\"q3\",\"jointValue\":0}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.jointValue",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 332,
+        "wires": [
+            [
+                "6220b7aff60c49b3"
+            ]
+        ]
+    },
+    {
+        "id": "13a9a25b6ab0da48",
+        "type": "ui_slider",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "label": "q3",
+        "tooltip": "",
+        "group": "1b913bb440dfe768",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-0.41",
+        "max": "0.0",
+        "step": "0.02",
+        "className": "",
+        "x": 270,
+        "y": 332,
+        "wires": [
+            [
+                "ee4019a0dbf88ab5"
+            ]
+        ]
+    },
+    {
+        "id": "c1244b77a0bed264",
+        "type": "change",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"command\":\"setJointValue\",\"jointName\":\"q4\",\"jointValue\":0}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.jointValue",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 396,
+        "wires": [
+            [
+                "6220b7aff60c49b3"
+            ]
+        ]
+    },
+    {
+        "id": "63524d817fbb3444",
+        "type": "ui_slider",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "label": "q4",
+        "tooltip": "",
+        "group": "1b913bb440dfe768",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-0.32",
+        "max": "0.0",
+        "step": "0.02",
+        "className": "",
+        "x": 270,
+        "y": 396,
+        "wires": [
+            [
+                "c1244b77a0bed264"
+            ]
+        ]
+    },
+    {
+        "id": "c7981c773858673c",
+        "type": "change",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "temp",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"command\":\"setJointValue\",\"jointName\":\"q5\",\"jointValue\":0}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.jointValue",
+                "pt": "msg",
+                "to": "temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 460,
+        "y": 460,
+        "wires": [
+            [
+                "6220b7aff60c49b3"
+            ]
+        ]
+    },
+    {
+        "id": "67266eea63367118",
+        "type": "ui_slider",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "label": "q5",
+        "tooltip": "",
+        "group": "1b913bb440dfe768",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0.0",
+        "max": "0.14",
+        "step": "0.01",
+        "className": "",
+        "x": 270,
+        "y": 460,
+        "wires": [
+            [
+                "c7981c773858673c"
+            ]
+        ]
+    },
+    {
+        "id": "6220b7aff60c49b3",
+        "type": "delay",
+        "z": "f56dafdc181dafae",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "6",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 810,
+        "y": 320,
+        "wires": [
+            [
+                "3699a2aa086d4aa8"
+            ]
+        ]
+    },
+    {
+        "id": "bbb74405f0c98c1e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "1b913bb440dfe768",
+        "type": "ui_group",
+        "name": "Assignment-6",
+        "tab": "55f1de182d0ca022",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0657dda42282684b",
+        "type": "ui_group",
+        "name": "temperature",
+        "tab": "921b9eaab560388f",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "55f1de182d0ca022",
+        "type": "ui_tab",
+        "name": "Task1.4",
+        "icon": "dashboard",
+        "disabled": true,
+        "hidden": false
+    },
+    {
+        "id": "921b9eaab560388f",
+        "type": "ui_tab",
+        "name": "DDP Task",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": true,
+        "hidden": false
+    }
+]
