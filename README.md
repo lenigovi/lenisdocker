@@ -68,7 +68,7 @@ In case you are terminated with the error message "Current user does not have pe
 
 As soon as you have entered the Docker you should be greeted by a terminal inside it and the green icon on the bottom left should state **`Dev Container`**. You can open a new terminal by selecting **`Terminal/New Terminal`** any time. You can now browse the Docker container just like a regular terminal and access the folders inside it as if they were on the host system (see the screenshot below).
 
-![Visual Studio Code terminal inside the container](../ROS2/media/visual_studio_code_dev_containers_terminal.png)
+![Visual Studio Code terminal inside the container](https://github.com/lenigovi/lenisdocker/blob/main/ROS2/media/visual_studio_code_dev_containers_terminal.png)
 
 In case you want to rebuild the image press **`Ctrl` + `Shift` + `P`**, type Rebuild and then select either **`DevContainers: Rebuild`** or `DevContainers: Rebuild without Cache`. Former will rebuild the image re-using existing layers while the latter will discard all the existing layers and rebuild the image from scratch.
 
