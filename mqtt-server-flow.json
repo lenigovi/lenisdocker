@@ -519,7 +519,7 @@
     {
         "id": "921b9eaab560388f",
         "type": "ui_tab",
-        "name": "DDP Task",
+        "name": "DDL Task",
         "icon": "dashboard",
         "order": 1,
         "disabled": true,
