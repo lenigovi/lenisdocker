@@ -9,11 +9,11 @@ The following guide will walk you through the set-up for Docker inside Visual St
 
 If you do not have Visual Studio Code installed on your system then [install it](https://code.visualstudio.com/download) and follow the Docker post-installation steps given [here](https://docs.docker.com/engine/install/linux-postinstall/) so that you can run Docker without `sudo`. Finally install [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) and [**Remote - Containers**](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) plugins inside Visual Studio Code and you should be ready to go. For installing the Remote Containers plug-in go the market place through the activity bar, browse the plug-in and install it as displayed in the screenshot below:
 
-Visual Studio Code before the Dev Containers installation
+![Visual Studio Code before the Dev Containers installation](../media/visual_studio_code_dev_containers_before_install.png)
 
 After the successful installation you should see a small **green icon on the bottom left of your window** as displayed in the following screenshot:
 
-Visual Studio Code after the Dev Containers installation
+![Visual Studio Code after the Dev Containers installation](../media/visual_studio_code_dev_containers_after_install.png)
 
 ### 1.2 Configuration
 
