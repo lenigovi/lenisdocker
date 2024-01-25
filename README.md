@@ -9,11 +9,11 @@ The following guide will walk you through the set-up for Docker inside Visual St
 
 If you do not have Visual Studio Code installed on your system then [install it](https://code.visualstudio.com/download) and follow the Docker post-installation steps given [here](https://docs.docker.com/engine/install/linux-postinstall/) so that you can run Docker without `sudo`. Finally install [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) and [**Remote - Containers**](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) plugins inside Visual Studio Code and you should be ready to go. For installing the Remote Containers plug-in go the market place through the activity bar, browse the plug-in and install it as displayed in the screenshot below:
 
-![Visual Studio Code before the Dev Containers installation](../ROS2/media/visual_studio_code_dev_containers_before_install.png)
+![Visual Studio Code before the Dev Containers installation](https://github.com/lenigovi/lenisdocker/blob/main/ROS2/media/visual_studio_code_dev_containers_before_install.png)
 
 After the successful installation you should see a small **green icon on the bottom left of your window** as displayed in the following screenshot:
 
-![Visual Studio Code after the Dev Containers installation](../ROS2/media/visual_studio_code_dev_containers_after_install.png)
+![Visual Studio Code after the Dev Containers installation](https://github.com/lenigovi/lenisdocker/blob/main/ROS2/media/visual_studio_code_dev_containers_after_install.png)
 
 ### 1.2 Configuration
 
@@ -54,14 +54,14 @@ Furthermore you can add a `tasks.json` that defines certain useful tasks that VS
 
 You can run these tasks by selecting `Terminal/Run Tasks...` and then selecting the desired task. This will open a subterminal and run this task in the corresponding subterminal.
 
-| ![Run tasks](../ROS2/media/visual_studio_code_terminal_tasks.png) | ![Tasks list](../ROS2/media/visual_studio_code_terminal_tasks_list.png) |
+| ![Run tasks](https://github.com/lenigovi/lenisdocker/blob/main/ROS2/media/visual_studio_code_terminal_tasks.png) | ![Tasks list](https://github.com/lenigovi/lenisdocker/blob/main/ROS2/media/visual_studio_code_terminal_tasks_list.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 ### 1.3 Usage
 
 After opening Visual Studio Code you can open the repository with **`File/Open Folder`**. When asked if you want to **`Reopen in container`** (see the left screenshot below) confirm. If this dialog does not appear click on the green symbol on the very left bottom of your window and select `Remote containers: Reopen in container` from the top center as shown in the bottom right picture). Depending on how many layers the Docker has, if they are already pre-cached and how good your internet connection is, it might take seconds or minutes to prepare your container for you.
 
-| ![](../ROS2/media/visual_studio_code_dev_containers_on_start.png) | ![](../ROS2/media/visual_studio_code_dev_containers_reopen_in_container.png) |
+| ![](https://github.com/lenigovi/lenisdocker/blob/main/ROS2/media/visual_studio_code_dev_containers_on_start.png) | ![](https://github.com/lenigovi/lenisdocker/blob/main/ROS2/media/visual_studio_code_dev_containers_reopen_in_container.png) |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 In case you are terminated with the error message "Current user does not have permission to run 'docker'. Try adding the user to the 'docker' group." follow the advice given [here](https://stackoverflow.com/questions/57840395/permission-issue-using-remote-development-extension-to-attach-to-a-docker-image). Open a new terminal on your host machine, enter `$ sudo usermod -aG docker $USER`, reboot and then retry opening the container inside Visual Studio Code.
