@@ -30,4 +30,6 @@ EXPOSE 8888
 
 CMD ["jupyter", "notebook", "--ip='*'", "--port=8888", "--no-browser", "--allow-root"]
 
+COPY mqtt-server-flow.json
+
 RUN pip cache purge 
